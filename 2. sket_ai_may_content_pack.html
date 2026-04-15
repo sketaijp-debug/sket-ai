@@ -1,0 +1,249 @@
+
+<style>
+  .wrap { max-width: 760px; margin: 0 auto; padding: 1.5rem; font-family: var(--font-sans); }
+  .tabs { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 1.5rem; }
+  .tab { padding: 6px 14px; border-radius: 20px; border: 0.5px solid var(--color-border-secondary); background: transparent; font-size: 12px; cursor: pointer; color: var(--color-text-secondary); white-space: nowrap; }
+  .tab.active { background: #E8820C; color: #fff; border-color: #E8820C; }
+  .lang-toggle { display: flex; gap: 6px; margin-bottom: 1.5rem; }
+  .lang-btn { padding: 5px 14px; border-radius: 20px; border: 0.5px solid var(--color-border-secondary); background: transparent; font-size: 12px; cursor: pointer; color: var(--color-text-secondary); }
+  .lang-btn.active { background: #1A1D23; color: #fff; border-color: #1A1D23; }
+  .doc { display: none; }
+  .doc.active { display: block; }
+  .post-meta { font-size: 11px; color: var(--color-text-secondary); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 4px; }
+  .post-title { font-size: 20px; font-weight: 500; color: var(--color-text-primary); margin: 0 0 0.75rem; line-height: 1.3; }
+  .post-intro { font-size: 14px; color: var(--color-text-secondary); border-left: 3px solid #E8820C; padding-left: 1rem; margin: 0 0 1.5rem; line-height: 1.7; }
+  .item { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 1rem 1.25rem; margin-bottom: 10px; }
+  .item-header { display: flex; align-items: baseline; gap: 10px; margin-bottom: 6px; }
+  .item-num { font-size: 11px; font-weight: 500; color: #E8820C; background: rgba(232,130,12,0.1); padding: 2px 8px; border-radius: 10px; }
+  .item-title { font-size: 15px; font-weight: 500; color: var(--color-text-primary); }
+  .item-desc { font-size: 13px; color: var(--color-text-secondary); line-height: 1.7; }
+  .cta-box { margin-top: 1.5rem; background: #1A1D23; border-radius: var(--border-radius-lg); padding: 1.25rem 1.5rem; text-align: center; }
+  .cta-box p { font-size: 13px; color: #bbb; margin-bottom: 10px; line-height: 1.6; }
+  .cta-btn { display: inline-block; background: #E8820C; color: #fff; padding: 8px 22px; border-radius: 20px; font-size: 13px; font-weight: 500; border: none; cursor: pointer; }
+  hr.div { border: none; border-top: 0.5px solid var(--color-border-tertiary); margin: 1.5rem 0; }
+  .caption-card { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 1rem 1.25rem; margin-bottom: 10px; }
+  .cap-num { font-size: 11px; font-weight: 500; color: #E8820C; margin-bottom: 6px; }
+  .cap-text { font-size: 13px; color: var(--color-text-primary); line-height: 1.7; margin-bottom: 8px; }
+  .cap-tags { font-size: 12px; color: var(--color-text-secondary); line-height: 1.8; }
+  .gbp-card { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 1rem 1.25rem; margin-bottom: 10px; }
+  .gbp-theme { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #E8820C; margin-bottom: 6px; }
+  .gbp-text { font-size: 13px; color: var(--color-text-primary); line-height: 1.7; }
+  .nl-section { margin-bottom: 1.25rem; }
+  .nl-label { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #E8820C; margin-bottom: 6px; }
+  .nl-text { font-size: 14px; color: var(--color-text-primary); line-height: 1.8; }
+</style>
+
+<div class="wrap">
+  <h2 class="sr-only">SKET-AI May content pack — 5 bilingual documents for Hakata Stay guesthouse</h2>
+
+  <div class="tabs">
+    <button class="tab active" onclick="showDoc('doc2',this)">📝 Doc 2: GW Guide</button>
+    <button class="tab" onclick="showDoc('doc3',this)">📸 Doc 3: Instagram</button>
+    <button class="tab" onclick="showDoc('doc4',this)">📍 Doc 4: Google Biz</button>
+    <button class="tab" onclick="showDoc('doc5',this)">📧 Doc 5: Newsletter</button>
+  </div>
+
+  <div class="lang-toggle">
+    <button class="lang-btn active" id="jp-btn" onclick="setLang('jp')">日本語</button>
+    <button class="lang-btn" id="en-btn" onclick="setLang('en')">English</button>
+  </div>
+
+  <!-- ══ DOC 2: GW GUIDE ══ -->
+  <div id="doc2" class="doc active">
+    <div id="doc2-jp">
+      <div class="post-meta">ブログ記事 · 観光ガイド</div>
+      <h1 class="post-title">ゴールデンウィークに福岡でやること10選｜外国人旅行者向け完全ガイド2026</h1>
+      <p class="post-intro">ゴールデンウィーク（4月下旬〜5月上旬）は、福岡が最も賑わう季節のひとつ。お祭り、グルメ、自然、歴史——すべてが揃う福岡で、特別なゴールデンウィークを過ごしませんか？外国人旅行者にも楽しめる体験を厳選してご紹介します。</p>
+      <div class="item"><div class="item-header"><span class="item-num">01</span><span class="item-title">博多どんたく港まつりに参加する</span></div><p class="item-desc">5月3〜4日開催。200万人以上が訪れる九州最大級のお祭り。カラフルな衣装の踊り手が市内を練り歩く圧巻のパレードは必見です。</p></div>
+      <div class="item"><div class="item-header"><span class="item-num">02</span><span class="item-title">屋台でディープな博多グルメを味わう</span></div><p class="item-desc">中洲・天神・長浜エリアの屋台で、ラーメン・もつ鍋・串焼きを堪能。地元の人々と肩を並べながら食べる屋台飯は、福岡旅行の醍醐味です。</p></div>
+      <div class="item"><div class="item-header"><span class="item-num">03</span><span class="item-title">太宰府天満宮を参拝する</span></div><p class="item-desc">全国から受験生が訪れる学問の神様・菅原道真を祀る神社。梅の季節は過ぎていますが、参道の梅ヶ枝餅（焼き餅）は年中絶品です。</p></div>
+      <div class="item"><div class="item-header"><span class="item-num">04</span><span class="item-title">糸島でドライブ＆カフェ巡り</span></div><p class="item-desc">福岡市内から車で約40分。海と山に囲まれた糸島は、おしゃれなカフェやファーム直売所が並ぶリゾートエリア。ゴールデンウィークの青空に映える絶景が待っています。</p></div>
+      <div class="item"><div class="item-header"><span class="item-num">05</span><span class="item-title">大濠公園でピクニック</span></div><p class="item-desc">福岡市中心部にある大きな池を囲む公園。コンビニやフードスタンドでテイクアウトして、のんびりピクニックを楽しむのが地元流です。</p></div>
+      <div class="item"><div class="item-header"><span class="item-num">06</span><span class="item-title">福岡城跡を散歩する</span></div><p class="item-desc">大濠公園に隣接する歴史スポット。石垣が残る城跡を歩きながら、江戸時代の福岡を想像してみてください。入場無料です。</p></div>
+      <div class="item"><div class="item-header"><span class="item-num">07</span><span class="item-title">キャナルシティ博多でショッピング</span></div><p class="item-desc">博多駅から徒歩圏内の大型複合施設。ゴールデンウィーク期間中は特別イベントやセールが開催されることも多く、お土産探しにも最適です。</p></div>
+      <div class="item"><div class="item-header"><span class="item-num">08</span><span class="item-title">能古島に渡る</span></div><p class="item-desc">博多湾に浮かぶ小島・能古島へフェリーで約10分。アイランドパークでは春の花々が咲き誇り、都会の喧騒を忘れられる癒しのスポットです。</p></div>
+      <div class="item"><div class="item-header"><span class="item-num">09</span><span class="item-title">もつ鍋を食べ尽くす</span></div><p class="item-desc">福岡名物のもつ鍋は、ゴールデンウィークにも外せない一品。コラーゲンたっぷりのスープと新鮮なホルモンの組み合わせは一度食べたらやみつきです。</p></div>
+      <div class="item"><div class="item-header"><span class="item-num">10</span><span class="item-title">博多旧市街・上川端商店街を歩く</span></div><p class="item-desc">昔ながらの商店が並ぶアーケード街を散策。地元のおばあちゃんが作るお惣菜や、地域限定のスイーツに出会える、旅行者が少ない穴場エリアです。</p></div>
+      <div class="cta-box">
+        <p>福岡観光の拠点には、博多駅から徒歩〇分の「博多ステイ」がおすすめ。<br>スタッフが地元ならではの情報をご案内します。ゴールデンウィークの空き室はお早めに。</p>
+        <button class="cta-btn">空き室を確認する</button>
+      </div>
+    </div>
+    <div id="doc2-en" style="display:none">
+      <div class="post-meta">Blog · Travel Guide</div>
+      <h1 class="post-title">10 Things to Do in Fukuoka During Golden Week — A Complete Guide for International Visitors 2026</h1>
+      <p class="post-intro">Golden Week (late April to early May) is one of Japan's biggest holiday periods — and Fukuoka is one of the best places in the country to spend it. Festivals, incredible food, nature, and history all collide in one city. Here are 10 experiences not to miss.</p>
+      <div class="item"><div class="item-header"><span class="item-num">01</span><span class="item-title">Experience Hakata Dontaku Port Festival</span></div><p class="item-desc">Held May 3–4, this is one of Kyushu's largest festivals, drawing over two million visitors. Colourful parade floats and dancers fill the streets of central Fukuoka — the energy is electric.</p></div>
+      <div class="item"><div class="item-header"><span class="item-num">02</span><span class="item-title">Eat at the Yatai (street food stalls)</span></div><p class="item-desc">Fukuoka's open-air yatai stalls in Nakasu, Tenjin, and Nagahama are iconic. Pull up a stool and eat ramen, grilled skewers, or motsunabe shoulder-to-shoulder with locals.</p></div>
+      <div class="item"><div class="item-header"><span class="item-num">03</span><span class="item-title">Visit Dazaifu Tenmangu Shrine</span></div><p class="item-desc">A short train ride from Hakata, this atmospheric shrine dedicated to the god of learning is one of Fukuoka's most beloved sites. Don't leave without trying the famous umegaemochi rice cakes on the approach.</p></div>
+      <div class="item"><div class="item-header"><span class="item-num">04</span><span class="item-title">Day trip to Itoshima</span></div><p class="item-desc">About 40 minutes by car from central Fukuoka, Itoshima is a coastal escape with craft cafes, farm shops, and seaside views. A perfect half-day away from the city buzz.</p></div>
+      <div class="item"><div class="item-header"><span class="item-num">05</span><span class="item-title">Picnic at Ohori Park</span></div><p class="item-desc">Grab food from a nearby convenience store and join locals relaxing around the park's beautiful central pond. On sunny Golden Week days, this is one of Fukuoka's most joyful scenes.</p></div>
+      <div class="item"><div class="item-header"><span class="item-num">06</span><span class="item-title">Explore Fukuoka Castle Ruins</span></div><p class="item-desc">Adjacent to Ohori Park and free to enter, the castle ruins offer a quiet walk among original stone walls. A nice contrast to the festival crowds nearby.</p></div>
+      <div class="item"><div class="item-header"><span class="item-num">07</span><span class="item-title">Shop at Canal City Hakata</span></div><p class="item-desc">A large mall within walking distance of Hakata Station, Canal City often hosts special Golden Week events and sales. Great for souvenirs or a rainy-day option.</p></div>
+      <div class="item"><div class="item-header"><span class="item-num">08</span><span class="item-title">Take the ferry to Nokonoshima Island</span></div><p class="item-desc">Just 10 minutes by ferry from Meinohama port, Nokonoshima Island Park is a flower-filled escape. The spring blooms during Golden Week make it one of the most photogenic spots in the region.</p></div>
+      <div class="item"><div class="item-header"><span class="item-num">09</span><span class="item-title">Try motsunabe (offal hot pot)</span></div><p class="item-desc">Fukuoka's other great food obsession alongside ramen. A bubbling pot of collagen-rich broth with fresh offal and vegetables, shared with friends — the ultimate Fukuoka dinner experience.</p></div>
+      <div class="item"><div class="item-header"><span class="item-num">10</span><span class="item-title">Wander Kamikawabata Shopping Arcade</span></div><p class="item-desc">A covered shopping street with a distinctly old-school Hakata feel. Local snacks, home-cooked side dishes, and neighbourhood charm — and far fewer tourists than the main attractions.</p></div>
+      <div class="cta-box">
+        <p>Hakata Stay is your perfect Golden Week base — just [X] minutes from Hakata Station.<br>Our team knows the city and loves sharing what locals actually do. Book early — Golden Week fills up fast.</p>
+        <button class="cta-btn">Check availability</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ DOC 3: INSTAGRAM ══ -->
+  <div id="doc3" class="doc">
+    <div id="doc3-jp">
+      <div class="post-meta">Instagramキャプション · 5月分 · 12本</div>
+      <div style="margin-bottom:1rem; font-size:13px; color:var(--color-text-secondary);">「博多ステイ」アカウント用</div>
+      <div class="caption-card"><div class="cap-num">01 · 博多の朝</div><div class="cap-text">博多の朝は、どこか特別な空気が流れています。窓から差し込む光の中で、今日の旅を思い描く瞬間——それが一番好きな時間です。チェックアウトまで、ゆっくり味わってください。</div><div class="cap-tags">#博多ステイ #福岡旅行 #ゲストハウス博多 #博多の朝 #旅の思い出<br>#HakataStay #FukuokaTravel #GuestHouseJapan #MorningInJapan #TravelJapan</div></div>
+      <div class="caption-card"><div class="cap-num">02 · 近くのグルメ</div><div class="cap-text">ここから歩いて5分。本場の博多ラーメンが食べられるお店があります。細麺と濃厚豚骨スープの組み合わせは、一度食べたら忘れられません。チェックイン時にスタッフに聞いてみてください🍜</div><div class="cap-tags">#博多ラーメン #福岡グルメ #旅行者おすすめ #博多駅周辺 #博多ステイ<br>#HakataRamen #FukuokaFood #FoodieJapan #RamenJapan #HakataStay</div></div>
+      <div class="caption-card"><div class="cap-num">03 · チェックイン風景</div><div class="cap-text">「いらっしゃいませ」ではなく、「おかえりなさい」と言いたい。博多ステイはそんな場所でありたいと思っています。旅の疲れをほっとほどいてください🏠</div><div class="cap-tags">#博多ステイ #ゲストハウス福岡 #旅人の宿 #おもてなし #福岡宿泊<br>#HakataStay #WelcomeHome #GuestHouseFukuoka #TravelJapan #JapanHospi tality</div></div>
+      <div class="caption-card"><div class="cap-num">04 · 旅行者へのアドバイス</div><div class="cap-text">福岡観光のコツ：博多駅・天神・中洲はぜんぶ電車かバスで15分圏内。小さいけれど、すべてが揃っている街——それが福岡の最大の魅力です✨</div><div class="cap-tags">#福岡観光 #旅行のコツ #博多ガイド #福岡アクセス #博多ステイ<br>#FukuokaTips #TravelTips #HakataGuide #ExploreJapan #HakataStay</div></div>
+      <div class="caption-card"><div class="cap-num">05 · 福岡の魅力</div><div class="cap-text">海もあって、山もあって、ラーメンもある。福岡ってずるいくらい全部揃ってるんですよね。またいつか来たいと思わせる街、それが福岡です🌊🍜🏔️</div><div class="cap-tags">#福岡最高 #また来たい #福岡の魅力 #九州旅行 #博多ステイ<br>#LoveFukuoka #BackToFukuoka #KyushuTravel #FukuokaJapan #HakataStay</div></div>
+      <div class="caption-card"><div class="cap-num">06 · ゴールデンウィーク</div><div class="cap-text">ゴールデンウィーク、福岡で過ごしませんか？博多どんたく祭り、屋台、絶品グルメ——この街の5月は特別です。空き室残りわずか、お早めに🎏</div><div class="cap-tags">#ゴールデンウィーク #博多どんたく #福岡旅行 #GW旅行 #博多ステイ<br>#GoldenWeekJapan #HakataDontaku #FukuokaFestival #TravelJapan #HakataStay</div></div>
+      <div class="caption-card"><div class="cap-num">07 · 屋台体験</div><div class="cap-text">夜の中洲、屋台のあかり、隣に座った人と乾杯する一杯——これが福岡の旅の醍醐味です。宿のスタッフに「今夜おすすめの屋台はどこ？」って聞いてみてください🍻</div><div class="cap-tags">#中洲屋台 #福岡屋台 #旅の夜 #博多夜遊び #博多ステイ<br>#FukuokaYatai #StreetFoodJapan #NaksuNight #FukuokaFood #HakataStay</div></div>
+      <div class="caption-card"><div class="cap-num">08 · 一人旅</div><div class="cap-text">一人で旅に来ても、ゲストハウスならすぐに友だちができます。ラウンジで話しかけてみてください。旅の話って、どこまでも続くから。</div><div class="cap-tags">#一人旅 #ゲストハウス #旅友 #ソロトラベル #博多ステイ<br>#SoloTravel #GuestHouseLife #TravelFriends #BackpackerJapan #HakataStay</div></div>
+      <div class="caption-card"><div class="cap-num">09 · 太宰府</div><div class="cap-text">博多から電車で25分、太宰府天満宮へ。梅の木と歴史ある参道、そして参道名物の梅ヶ枝餅——半日コースとして本当におすすめです⛩️</div><div class="cap-tags">#太宰府天満宮 #福岡観光 #日帰り旅行 #梅ヶ枝餅 #博多ステイ<br>#DazaifuShrine #FukuokaSightseeing #DayTripJapan #JapanShrine #HakataStay</div></div>
+      <div class="caption-card"><div class="cap-num">10 · 朝ごはん</div><div class="cap-text">旅先での朝ごはんって、なぜかいつもより美味しく感じませんか？近くのコンビニでも、地元の喫茶店でも、博多の朝食文化を楽しんでみてください☕</div><div class="cap-tags">#博多の朝食 #旅の朝 #福岡カフェ #旅行者の朝 #博多ステイ<br>#FukuokaBreakfast #MorningJapan #TravelMorning #CafeFukuoka #HakataStay</div></div>
+      <div class="caption-card"><div class="cap-num">11 · 糸島</div><div class="cap-text">福岡市内から車で40分、糸島へ。おしゃれなカフェ、新鮮な海産物、青い海——都会の疲れを癒すのにぴったりの場所です🌊 日帰りドライブにぜひ。</div><div class="cap-tags">#糸島 #福岡ドライブ #糸島カフェ #海の見えるカフェ #博多ステイ<br>#Itoshima #FukuokaDrive #ItoshimaCafe #SeaViewCafe #HakataStay</div></div>
+      <div class="caption-card"><div class="cap-num">12 · 旅の終わりに</div><div class="cap-text">福岡、楽しんでいただけましたか？またいつでも帰ってきてください。次の旅も、博多ステイでお待ちしています🧳</div><div class="cap-tags">#またね福岡 #旅の終わり #旅の思い出 #福岡また来るね #博多ステイ<br>#GoodbyeFukuoka #TravelMemories #SeeYouAgain #FukuokaTravel #HakataStay</div></div>
+    </div>
+    <div id="doc3-en" style="display:none">
+      <div class="post-meta">Instagram Captions · May · 12 posts</div>
+      <div style="margin-bottom:1rem; font-size:13px; color:var(--color-text-secondary);">For "Hakata Stay" account</div>
+      <div class="caption-card"><div class="cap-num">01 · Morning in Hakata</div><div class="cap-text">There's something special about mornings in Hakata. Light through the window, a whole day of exploring ahead — this is our favourite moment of the day. No rush. Enjoy every second of it.</div><div class="cap-tags">#HakataStay #FukuokaTravel #GuestHouseJapan #MorningInJapan #TravelJapan</div></div>
+      <div class="caption-card"><div class="cap-num">02 · Food nearby</div><div class="cap-text">5 minutes on foot from here, there's a bowl of authentic Hakata ramen waiting for you. Thin noodles, rich tonkotsu broth, perfected over generations. Ask our staff for the exact spot 🍜</div><div class="cap-tags">#HakataRamen #FukuokaFood #FoodieJapan #RamenJapan #HakataStay</div></div>
+      <div class="caption-card"><div class="cap-num">03 · Check-in</div><div class="cap-text">We don't say "welcome" — we say "welcome home." Hakata Stay is the kind of place where you drop your bag and immediately feel like you can breathe. Come as you are 🏠</div><div class="cap-tags">#HakataStay #WelcomeHome #GuestHouseFukuoka #TravelJapan #JapanHospitality</div></div>
+      <div class="caption-card"><div class="cap-num">04 · Travel tip</div><div class="cap-text">Pro tip for exploring Fukuoka: Hakata Station, Tenjin, and Nakasu are all within 15 minutes of each other by train or bus. It's a small city that somehow has everything ✨</div><div class="cap-tags">#FukuokaTips #TravelTips #HakataGuide #ExploreJapan #HakataStay</div></div>
+      <div class="caption-card"><div class="cap-num">05 · Why Fukuoka</div><div class="cap-text">Sea, mountains, ramen, festivals, friendly locals, affordable prices. Fukuoka really does have it all. No wonder people come once and spend the rest of their lives trying to come back 🌊🍜</div><div class="cap-tags">#LoveFukuoka #BackToFukuoka #KyushuTravel #FukuokaJapan #HakataStay</div></div>
+      <div class="caption-card"><div class="cap-num">06 · Golden Week</div><div class="cap-text">Golden Week in Fukuoka is something else. Hakata Dontaku festival, yatai street stalls, golden sunshine — May here is magical. A few rooms still left 🎏 Book before they're gone.</div><div class="cap-tags">#GoldenWeekJapan #HakataDontaku #FukuokaFestival #TravelJapan #HakataStay</div></div>
+      <div class="caption-card"><div class="cap-num">07 · Yatai experience</div><div class="cap-text">Nakasu at night, yatai lanterns glowing, a bowl of ramen and the person next to you becoming your friend by the second beer — this is the soul of Fukuoka. Ask us which stall to visit tonight 🍻</div><div class="cap-tags">#FukuokaYatai #StreetFoodJapan #NaksuNight #FukuokaFood #HakataStay</div></div>
+      <div class="caption-card"><div class="cap-num">08 · Solo travel</div><div class="cap-text">Travelling solo? You won't be for long. Strike up a conversation in the lounge — travel stories have a way of going until 2am. That's what guesthouses are for.</div><div class="cap-tags">#SoloTravel #GuestHouseLife #TravelFriends #BackpackerJapan #HakataStay</div></div>
+      <div class="caption-card"><div class="cap-num">09 · Dazaifu day trip</div><div class="cap-text">25 minutes from Hakata by train: Dazaifu Tenmangu Shrine. Ancient plum trees, a stunning main hall, and the famous umegaemochi rice cakes on the approach. A perfect half-day out ⛩️</div><div class="cap-tags">#DazaifuShrine #FukuokaSightseeing #DayTripJapan #JapanShrine #HakataStay</div></div>
+      <div class="caption-card"><div class="cap-num">10 · Breakfast</div><div class="cap-text">Breakfast always tastes better when you're travelling. Whether it's a local kissaten (coffee shop) or a perfectly assembled convenience store spread, Fukuoka mornings are worth waking up for ☕</div><div class="cap-tags">#FukuokaBreakfast #MorningJapan #TravelMorning #CafeFukuoka #HakataStay</div></div>
+      <div class="caption-card"><div class="cap-num">11 · Itoshima</div><div class="cap-text">40 minutes from Fukuoka by car: Itoshima. Coastal cafes, fresh seafood, ocean views, and a completely different pace of life. The perfect full-day escape 🌊</div><div class="cap-tags">#Itoshima #FukuokaDrive #ItoshimaCafe #SeaViewCafe #HakataStay</div></div>
+      <div class="caption-card"><div class="cap-num">12 · End of trip</div><div class="cap-text">Hope Fukuoka treated you well. Come back anytime — your room will be ready. Until next time 🧳</div><div class="cap-tags">#GoodbyeFukuoka #TravelMemories #SeeYouAgain #FukuokaTravel #HakataStay</div></div>
+    </div>
+  </div>
+
+  <!-- ══ DOC 4: GOOGLE BIZ ══ -->
+  <div id="doc4" class="doc">
+    <div id="doc4-jp">
+      <div class="post-meta">Googleビジネス更新 · 5月分 · 4件</div>
+      <div class="gbp-card"><div class="gbp-theme">① ゴールデンウィーク特別プラン</div><p class="gbp-text">【GW特別プランご案内】5月3日〜6日、ゴールデンウィーク限定の特別宿泊プランをご用意しました。博多どんたく祭りの会場まで徒歩圏内。ご予約はお早めに。▶ 予約はこちら</p></div>
+      <div class="gbp-card"><div class="gbp-theme">② 博多どんたく祭り紹介</div><p class="gbp-text">【博多どんたくまで徒歩圏内】5月3〜4日は九州最大のお祭り「博多どんたく港まつり」。当宿は会場まで徒歩〇分。賑やかな福岡の春を、ぜひ拠点として楽しんでください。▶ ご予約受付中</p></div>
+      <div class="gbp-card"><div class="gbp-theme">③ 夏季早期予約キャンペーン</div><p class="gbp-text">【夏の早割キャンペーン開始】7〜8月の宿泊を今予約すると、通常料金より10%オフ。福岡の夏は祭り・花火・海と見どころ満載です。人気日程はすぐ埋まります。▶ 今すぐ予約</p></div>
+      <div class="gbp-card"><div class="gbp-theme">④ 福岡グルメ特集</div><p class="gbp-text">【福岡グルメを制覇しよう】博多ラーメン・もつ鍋・屋台・明太子——当宿スタッフが地元おすすめのお店をご案内します。食いしん坊な旅行者、大歓迎です🍜▶ 宿泊予約・お問い合わせはこちら</p></div>
+    </div>
+    <div id="doc4-en" style="display:none">
+      <div class="post-meta">Google Business Posts · May · 4 posts</div>
+      <div class="gbp-card"><div class="gbp-theme">① Golden Week Special Plan</div><p class="gbp-text">Golden Week Special (May 3–6): We've prepared a limited-availability plan for Japan's biggest holiday week. Hakata Dontaku Festival is walking distance. Rooms are filling fast. ▶ Book now</p></div>
+      <div class="gbp-card"><div class="gbp-theme">② Hakata Dontaku Festival</div><p class="gbp-text">Hakata Dontaku Port Festival — May 3 & 4 — is Kyushu's largest festival, drawing 2 million+ visitors. We're just [X] minutes' walk from the main parade route. The perfect base for Fukuoka's biggest celebration. ▶ Reserve your room</p></div>
+      <div class="gbp-card"><div class="gbp-theme">③ Summer Early-Bird Campaign</div><p class="gbp-text">Early Summer Offer: Book July–August dates now and save 10% off the standard rate. Fukuoka's summer brings festivals, fireworks, and beach trips. Popular weekends fill quickly. ▶ Book early and save</p></div>
+      <div class="gbp-card"><div class="gbp-theme">④ Fukuoka Food Guide</div><p class="gbp-text">Hakata ramen, motsunabe, yatai street stalls, mentaiko — Fukuoka is a food lover's city. Our staff know the best local spots and love sharing recommendations. Foodies, you're in the right place 🍜 ▶ Book your stay</p></div>
+    </div>
+  </div>
+
+  <!-- ══ DOC 5: NEWSLETTER ══ -->
+  <div id="doc5" class="doc">
+    <div id="doc5-jp">
+      <div class="post-meta">月次ニュースレター · 2026年5月号</div>
+      <div class="item" style="border-top: 3px solid #E8820C;">
+        <div class="nl-section">
+          <div class="nl-label">① 季節のご挨拶</div>
+          <div class="nl-text">五月になりました。博多の街は緑が増え、どんたく祭りの準備で活気に満ちています。いつも博多ステイを応援いただき、ありがとうございます。今月も福岡の旬の情報をお届けします。</div>
+        </div>
+        <hr class="div">
+        <div class="nl-section">
+          <div class="nl-label">② 今月の福岡おすすめ情報</div>
+          <div class="nl-text">
+            <strong style="font-weight:500;">🎏 博多どんたく港まつり（5/3〜4）</strong><br>
+            九州最大のお祭りが今年もやってきます。メインパレードは市内中心部を練り歩き、見物するだけでも圧巻の迫力。外国からのお客様にも大人気のイベントです。<br><br>
+            <strong style="font-weight:500;">🍜 5月限定・屋台割引キャンペーン</strong><br>
+            一部の屋台で宿泊証明書を見せると割引が受けられるキャンペーンを実施予定です。詳細はチェックイン時にスタッフまでお尋ねください。<br><br>
+            <strong style="font-weight:500;">🌿 糸島カフェ新店オープン情報</strong><br>
+            糸島エリアに話題のカフェが続々オープン中。最新情報はスタッフがご案内します。
+          </div>
+        </div>
+        <hr class="div">
+        <div class="nl-section">
+          <div class="nl-label">③ 施設からのお知らせ</div>
+          <div class="nl-text">5月より共用ラウンジの営業時間を延長（〜24時）し、夜遅いご帰宅の方も気軽にリラックスいただけるようになりました。また、多言語対応AIチャットボットをウェブサイトに導入。24時間いつでもご質問にお答えできます。</div>
+        </div>
+        <hr class="div">
+        <div class="nl-section">
+          <div class="nl-label">④ ご予約・お問い合わせ</div>
+          <div class="nl-text">ゴールデンウィーク・夏休みのご予約はお早めに。<br>宿泊経験者の方には、リピーター割引（10%オフ）もご用意しています。</div>
+        </div>
+        <div class="cta-box" style="margin-top:1rem;">
+          <p>ご予約・お問い合わせはウェブサイトまたはこのメールへご返信ください。<br>またお会いできる日を楽しみにしています🏮</p>
+          <button class="cta-btn">今すぐ予約する</button>
+        </div>
+      </div>
+    </div>
+    <div id="doc5-en" style="display:none">
+      <div class="post-meta">Monthly Newsletter · May 2026</div>
+      <div class="item" style="border-top: 3px solid #E8820C;">
+        <div class="nl-section">
+          <div class="nl-label">① Seasonal greeting</div>
+          <div class="nl-text">May has arrived in Fukuoka — the streets are green, the festival drums are being tuned, and the city is at its most energetic. Thank you for being part of the Hakata Stay community. Here's what's happening this month.</div>
+        </div>
+        <hr class="div">
+        <div class="nl-section">
+          <div class="nl-label">② Fukuoka highlights this month</div>
+          <div class="nl-text">
+            <strong style="font-weight:500;">🎏 Hakata Dontaku Port Festival (May 3–4)</strong><br>
+            Kyushu's biggest festival returns. The main parade fills the streets of central Fukuoka with colour, music, and dancers. Even just watching from the roadside is an experience you won't forget.<br><br>
+            <strong style="font-weight:500;">🍜 Yatai discount campaign — May only</strong><br>
+            Select yatai stalls are offering a small discount to guests who show their Hakata Stay booking confirmation. Ask our staff for the current participating stalls on check-in.<br><br>
+            <strong style="font-weight:500;">🌿 New cafes opening in Itoshima</strong><br>
+            The Itoshima coastal area continues to grow its cafe scene. Our staff always have the latest recommendations — just ask.
+          </div>
+        </div>
+        <hr class="div">
+        <div class="nl-section">
+          <div class="nl-label">③ From the guesthouse</div>
+          <div class="nl-text">From May, our shared lounge is now open until midnight — so late-night arrivals can relax without rushing. We've also added a multilingual AI chatbot to our website that answers questions 24/7, in English, Japanese, and Korean.</div>
+        </div>
+        <hr class="div">
+        <div class="nl-section">
+          <div class="nl-label">④ Book or get in touch</div>
+          <div class="nl-text">Golden Week and summer dates are filling up. Previous guests get a 10% returning-guest discount — just mention it when you book.</div>
+        </div>
+        <div class="cta-box" style="margin-top:1rem;">
+          <p>Reply to this email or visit our website to book.<br>We hope to welcome you back to Fukuoka very soon 🏮</p>
+          <button class="cta-btn">Book your stay</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+const langState = { current: 'jp' };
+
+function showDoc(id, btn) {
+  document.querySelectorAll('.doc').forEach(d => d.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  btn.classList.add('active');
+  setLangVisibility(langState.current);
+}
+
+function setLang(lang) {
+  langState.current = lang;
+  document.getElementById('jp-btn').classList.toggle('active', lang === 'jp');
+  document.getElementById('en-btn').classList.toggle('active', lang === 'en');
+  setLangVisibility(lang);
+}
+
+function setLangVisibility(lang) {
+  ['doc2','doc3','doc4','doc5'].forEach(d => {
+    const jp = document.getElementById(d + '-jp');
+    const en = document.getElementById(d + '-en');
+    if (jp) jp.style.display = lang === 'jp' ? 'block' : 'none';
+    if (en) en.style.display = lang === 'en' ? 'block' : 'none';
+  });
+}
+</script>

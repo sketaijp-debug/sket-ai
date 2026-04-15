@@ -1,0 +1,116 @@
+
+<style>
+  .post-wrap { max-width: 740px; margin: 0 auto; padding: 2rem 1.5rem; font-family: var(--font-sans); }
+  .lang-toggle { display: flex; gap: 8px; margin-bottom: 2rem; }
+  .lang-btn { padding: 6px 16px; border-radius: 20px; border: 0.5px solid var(--color-border-secondary); background: transparent; font-size: 13px; cursor: pointer; color: var(--color-text-secondary); }
+  .lang-btn.active { background: #E8820C; color: #fff; border-color: #E8820C; }
+  .post-meta { font-size: 12px; color: var(--color-text-secondary); margin-bottom: 0.5rem; letter-spacing: 0.05em; text-transform: uppercase; }
+  .post-title { font-size: 22px; font-weight: 500; color: var(--color-text-primary); margin: 0 0 0.5rem; line-height: 1.3; }
+  .post-intro { font-size: 15px; color: var(--color-text-secondary); border-left: 3px solid #E8820C; padding-left: 1rem; margin: 1.25rem 0 2rem; line-height: 1.7; }
+  .shop { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 1.25rem 1.5rem; margin-bottom: 1rem; }
+  .shop-header { display: flex; align-items: baseline; gap: 10px; margin-bottom: 8px; }
+  .shop-num { font-size: 12px; font-weight: 500; color: #E8820C; background: rgba(232,130,12,0.1); padding: 2px 8px; border-radius: 10px; }
+  .shop-name { font-size: 16px; font-weight: 500; color: var(--color-text-primary); }
+  .shop-desc { font-size: 14px; color: var(--color-text-secondary); line-height: 1.7; }
+  .cta-box { margin-top: 2rem; background: #1A1D23; border-radius: var(--border-radius-lg); padding: 1.5rem; text-align: center; }
+  .cta-box p { font-size: 14px; color: #ccc; margin-bottom: 12px; line-height: 1.6; }
+  .cta-btn { display: inline-block; background: #E8820C; color: #fff; padding: 10px 24px; border-radius: 20px; font-size: 14px; font-weight: 500; text-decoration: none; cursor: pointer; border: none; }
+  .divider { border: none; border-top: 0.5px solid var(--color-border-tertiary); margin: 2rem 0; }
+  h3 { font-size: 15px; font-weight: 500; color: var(--color-text-secondary); margin: 0 0 1rem; }
+</style>
+
+<div class="post-wrap">
+  <h2 class="sr-only">SKET-AI bilingual blog post: Top 5 Ramen near Hakata Station</h2>
+
+  <div class="lang-toggle">
+    <button class="lang-btn active" onclick="show('jp', this)">日本語</button>
+    <button class="lang-btn" onclick="show('en', this)">English</button>
+  </div>
+
+  <!-- JAPANESE -->
+  <div id="jp">
+    <div class="post-meta">ブログ記事 · 観光情報</div>
+    <h1 class="post-title">博多駅周辺のおすすめラーメン5選｜外国人観光客にも大人気の名店ガイド</h1>
+    <p class="post-intro">福岡・博多といえばラーメン。豚骨スープのコクと深みは、一度食べたら忘れられない味です。今回は博多駅から徒歩圏内でアクセス抜群の名店を5店ご紹介します。地元の方にも観光客にも愛される、本物の博多ラーメンをぜひご堪能ください。</p>
+
+    <div class="shop">
+      <div class="shop-header"><span class="shop-num">01</span><span class="shop-name">一蘭 博多駅前店</span></div>
+      <p class="shop-desc">一人用の仕切りがある「味集中カウンター」が特徴の一蘭は、外国人観光客にも大人気。秘伝の赤いタレが絶品で、辛さや麺の硬さを細かくカスタマイズできます。英語メニューもあるので、語学に自信がなくても安心してご利用いただけます。</p>
+    </div>
+
+    <div class="shop">
+      <div class="shop-header"><span class="shop-num">02</span><span class="shop-name">shin-shin 博多デイトス店</span></div>
+      <p class="shop-desc">博多駅直結のデイトス内にあり、アクセス抜群のshin-shin。あっさりとした博多豚骨に独自のアレンジを加えた「博多ラーメン」は地元ファンが多い一品です。ランチタイムは行列ができることも多いため、時間に余裕を持ってご来店ください。</p>
+    </div>
+
+    <div class="shop">
+      <div class="shop-header"><span class="shop-num">03</span><span class="shop-name">元祖長浜屋</span></div>
+      <p class="shop-desc">福岡ラーメンの原点ともいえる「長浜系」を代表する名店。替え玉文化発祥の地とも言われており、麺だけを追加注文するスタイルが楽しめます。濃厚でありながらすっきりしたスープが癖になる一杯です。</p>
+    </div>
+
+    <div class="shop">
+      <div class="shop-header"><span class="shop-num">04</span><span class="shop-name">博多一幸舎 博多デイトス店</span></div>
+      <p class="shop-desc">泡立てたスープが特徴の「泡系豚骨」で有名な一幸舎は、国内外のラーメンファンから高い評価を得ています。口当たりがやわらかく、初めて豚骨ラーメンを食べる方にもおすすめです。</p>
+    </div>
+
+    <div class="shop">
+      <div class="shop-header"><span class="shop-num">05</span><span class="shop-name">博多だるま</span></div>
+      <p class="shop-desc">昭和30年代から続く老舗の味を守り続けている博多だるま。濃厚な豚骨スープと細麺の組み合わせは、博多ラーメンの王道スタイル。行列ができる日も多く、それだけの価値がある一杯です。</p>
+    </div>
+
+    <hr class="divider">
+    <h3>この記事を書いた宿のご紹介</h3>
+    <div class="cta-box">
+      <p>このブログは、博多駅から徒歩〇分の〔宿名〕がお届けしました。<br>ラーメンの名店が集まる博多で、快適な滞在をお楽しみください。<br>ご予約・お問い合わせはお気軽にどうぞ。</p>
+      <button class="cta-btn">ご予約・お問い合わせはこちら</button>
+    </div>
+  </div>
+
+  <!-- ENGLISH -->
+  <div id="en" style="display:none;">
+    <div class="post-meta">Blog · Travel Guide</div>
+    <h1 class="post-title">Top 5 Ramen Spots Near Hakata Station — A Guide for Visitors to Fukuoka</h1>
+    <p class="post-intro">If you're visiting Fukuoka, ramen is non-negotiable. The city's rich, creamy tonkotsu (pork bone) broth is unlike anything you'll find anywhere else in Japan. Here are five highly recommended ramen restaurants all within easy reach of Hakata Station.</p>
+
+    <div class="shop">
+      <div class="shop-header"><span class="shop-num">01</span><span class="shop-name">Ichiran Hakata Ekimae</span></div>
+      <p class="shop-desc">Ichiran is perhaps the most internationally famous ramen chain from Fukuoka, and for good reason. Each diner gets a private booth — the "Flavor Concentration Counter" — allowing you to eat at your own pace without distraction. English menus are available, and you can customize your broth richness, noodle firmness, and spice level to perfection.</p>
+    </div>
+
+    <div class="shop">
+      <div class="shop-header"><span class="shop-num">02</span><span class="shop-name">Shin-Shin Hakata Daitos</span></div>
+      <p class="shop-desc">Located directly inside Hakata Daitos mall — attached to Hakata Station — Shin-Shin is as convenient as it gets. Their lighter, refined take on Hakata tonkotsu has earned a devoted local following. Expect a queue at lunchtime; it's worth the wait.</p>
+    </div>
+
+    <div class="shop">
+      <div class="shop-header"><span class="shop-num">03</span><span class="shop-name">Ganso Nagahamaya</span></div>
+      <p class="shop-desc">Said to be the birthplace of the "kaedama" tradition — ordering extra noodles to finish your remaining broth — Nagahamaya is a living piece of Fukuoka food history. The broth is rich but surprisingly clean on the palate, and the thin noodles cook in seconds.</p>
+    </div>
+
+    <div class="shop">
+      <div class="shop-header"><span class="shop-num">04</span><span class="shop-name">Hakata Ikkousha Daitos</span></div>
+      <p class="shop-desc">Ikkousha is famous for its "foamy tonkotsu" — a broth whipped to a creamy, airy texture that coats the noodles beautifully. It's a gentler introduction to Hakata ramen for those trying tonkotsu for the first time, while still satisfying for seasoned fans.</p>
+    </div>
+
+    <div class="shop">
+      <div class="shop-header"><span class="shop-num">05</span><span class="shop-name">Hakata Daruma</span></div>
+      <p class="shop-desc">A classic that has been serving Fukuoka's definitive tonkotsu since the 1950s. Hakata Daruma keeps things simple: ultra-rich broth, thin firm noodles, and no shortcuts. Lines form here regularly, and every minute of waiting is repaid in the bowl.</p>
+    </div>
+
+    <hr class="divider">
+    <h3>About the author</h3>
+    <div class="cta-box">
+      <p>This guide was written by [Guesthouse Name], located just [X] minutes' walk from Hakata Station.<br>We'd love to be your home base while you explore Fukuoka's incredible food scene.<br>Bookings and inquiries are always welcome.</p>
+      <button class="cta-btn">Book or contact us</button>
+    </div>
+  </div>
+</div>
+
+<script>
+function show(lang, btn) {
+  document.getElementById('jp').style.display = lang === 'jp' ? 'block' : 'none';
+  document.getElementById('en').style.display = lang === 'en' ? 'block' : 'none';
+  document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+}
+</script>
